@@ -8,4 +8,5 @@ module.exports = {
   db: process.env.DATABASE,
   dbPort: process.env.DBPORT,
   secret: process.env.JWT_SECRET,
+  adminId: process.env.ADMIN_ID,
 };

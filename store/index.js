@@ -61,7 +61,8 @@ class Database {
     const exists = await this.connect().then((db) =>
       db.query(`SELECT * FROM ${TABLE} WHERE user_id = "${id}"`)
     );
-    if (exists[0].user_id) {
+
+    if (exists.length != 0) {
       //Asignar todos los valores actualizables
       if (name == undefined) {
         name = await this.connect().then((db) =>
